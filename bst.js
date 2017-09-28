@@ -86,4 +86,8 @@ bst.push(1)
 
 // console.log("BST AFTER", bst);
 
+console.log("***DEPTH FIRST SEARCH***");
 dfs(bst.root)
+
+console.log("\n***IN ORDER TRAVERSAL***");
+inOrder(bst.root)
