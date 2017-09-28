@@ -57,16 +57,17 @@ BinarySearchTree.prototype.push = function(val) {
 }
 
 // Depth First Search 
-function dfs(node) {
+
+// Pre Order Traversal
+function preOrder(node) {
     if (node) {
-        console.log(node.value);
-        dfs(node.left)
-        dfs(node.right)
+        console.log(node.value)
+        preOrder(node.left)
+        preOrder(node.right)
     }
 }
 
 // In Order Traversal
-
 function inOrder(node) {
     if (node) {
         inOrder(node.left)
@@ -75,19 +76,34 @@ function inOrder(node) {
     }
 }
 
+// Post Order Traversal
+function postOrder(node) {
+    if (node) {
+        postOrder(node.left)
+        postOrder(node.right)
+        console.log(node.value)
+    }
+} 
+
+
+// Create instance of BST
 var bst  = new BinarySearchTree()
 
-// console.log("BST BEFORE", bst)
+// Push values to BST
+bst.push(40)
+bst.push(25)
+bst.push(10)
+bst.push(32)
+bst.push(78)
 
-bst.push(2)
-bst.push(1)
-bst.push(5)
-bst.push(1)
 
-// console.log("BST AFTER", bst);
-
+// Call search methods
 console.log("***DEPTH FIRST SEARCH***");
-dfs(bst.root)
+console.log("Pre order traversal: ");
+preOrder(bst.root)
 
-console.log("\n***IN ORDER TRAVERSAL***");
+console.log("\nIn order traversal: ");
 inOrder(bst.root)
+
+console.log("\nPost order traversal: ");
+postOrder(bst.root)
