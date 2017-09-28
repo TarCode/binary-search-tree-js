@@ -77,12 +77,13 @@ function inOrder(node) {
 
 var bst  = new BinarySearchTree()
 
-console.log("BST BEFORE", bst)
+// console.log("BST BEFORE", bst)
 
 bst.push(2)
 bst.push(1)
 bst.push(5)
 bst.push(1)
 
-console.log("BST AFTER", bst);
+// console.log("BST AFTER", bst);
 
+dfs(bst.root)
