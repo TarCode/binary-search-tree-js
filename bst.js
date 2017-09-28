@@ -127,3 +127,9 @@ inOrder(bst.root)
 
 console.log("\nPost order traversal: ");
 postOrder(bst.root)
+
+console.log("\nMin Value: ");
+console.log(minNode(bst.root));
+
+console.log("\nMax Value: ");
+console.log(maxNode(bst.root));
