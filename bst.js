@@ -56,7 +56,6 @@ BinarySearchTree.prototype.push = function(val) {
     }
 }
 
-// Depth First Search 
 
 // Pre Order Traversal
 function preOrder(node) {
@@ -119,8 +118,7 @@ bst.push(32)
 bst.push(78)
 
 
-// Call search methods
-console.log("***DEPTH FIRST SEARCH***");
+// Call methods
 console.log("Pre order traversal: ");
 preOrder(bst.root)
 
