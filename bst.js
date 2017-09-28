@@ -1,3 +1,7 @@
+/*
+    Based on: https://khan4019.github.io/front-end-Interview-Questions/bst.html
+*/
+
 // To create a Binary Search Tree:
 
 // Create a node:
@@ -51,3 +55,34 @@ BinarySearchTree.prototype.push = function(val) {
         }
     }
 }
+
+// Depth First Search 
+function dfs(node) {
+    if (node) {
+        console.log(node.value);
+        dfs(node.left)
+        dfs(node.right)
+    }
+}
+
+// In Order Traversal
+
+function inOrder(node) {
+    if (node) {
+        inOrder(node.left)
+        console.log(node.value)
+        inOrder(node.right)
+    }
+}
+
+var bst  = new BinarySearchTree()
+
+console.log("BST BEFORE", bst)
+
+bst.push(2)
+bst.push(1)
+bst.push(5)
+bst.push(1)
+
+console.log("BST AFTER", bst);
+
