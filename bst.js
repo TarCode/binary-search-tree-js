@@ -83,7 +83,29 @@ function postOrder(node) {
         postOrder(node.right)
         console.log(node.value)
     }
-} 
+}
+
+// Min Value
+function minNode(node) {
+    if (!node) {
+        return 0
+    }
+    if (node.left) {
+        return minNode(node.left)
+    }
+    return node.value
+}
+
+// Max Value
+function maxNode(node) {
+    if (!node) {
+        return 0
+    }
+    if (node.right) {
+        return maxNode(node.right)
+    }
+    return node.value
+}
 
 
 // Create instance of BST
